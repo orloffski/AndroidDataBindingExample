@@ -2,6 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+        <import type="com.example.madcat.databindingexample.Converter"/>
+
         <variable
             name="employee"
             type="com.example.madcat.databindingexample.data.Employee" />
@@ -29,7 +31,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(employee.age)}" />
+            android:text="@={Converter.convertIntToString(employee.age)}" />
 
         <Button
             android:id="@+id/btnChange"
