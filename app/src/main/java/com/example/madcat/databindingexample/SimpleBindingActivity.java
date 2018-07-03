@@ -15,6 +15,7 @@ public class SimpleBindingActivity extends AppCompatActivity {
 
         Car car = new Car("Toyota", "RAV4", 2015);
 //        Car car = new Car("Toyota", "RAV4", 0);
+        car.setEmployee("Test user");
 
         ActivitySimpleBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_simple);
         binding.setCar(car);
