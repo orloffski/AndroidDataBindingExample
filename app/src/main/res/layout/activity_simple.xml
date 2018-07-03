@@ -38,8 +38,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text='@{employee.firstName + " " + employee.secondName}'
-            android:visibility="@{employee == null ? View.GONE : View.VISIBLE}" />
+            android:text='@{employee.firstName ?? @string/default_employee_name}'/>
 
         <View
             android:layout_width="match_parent"

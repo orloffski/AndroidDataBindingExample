@@ -3,4 +3,5 @@
     <string name="main_app_title">Android Bindings</string>
     <string name="app_simple_binding_title">Simple Binding</string>
     <string name="default_year">2000</string>
+    <string name="default_employee_name">undefined employee</string>
 </resources>
