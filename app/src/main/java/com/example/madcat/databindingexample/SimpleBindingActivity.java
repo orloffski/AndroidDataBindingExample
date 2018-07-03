@@ -13,8 +13,8 @@ public class SimpleBindingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        Car car = new Car("Toyota", "RAV4", 2001);
-        Car car = new Car("Toyota", "RAV4", 0);
+        Car car = new Car("Toyota", "RAV4", 2015);
+//        Car car = new Car("Toyota", "RAV4", 0);
 
         ActivitySimpleBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_simple);
         binding.setCar(car);
