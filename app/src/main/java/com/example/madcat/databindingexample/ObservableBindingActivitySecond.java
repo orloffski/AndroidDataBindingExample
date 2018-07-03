@@ -24,6 +24,10 @@ public class ObservableBindingActivitySecond extends AppCompatActivity {
 
     public void loadData(){
         employee = new Employee("John", "Smith", 45);
+
+        employee.addHobby("Formula 1");
+        employee.addHobby("Gaming");
+        employee.addHobby("Travelling");
     }
 
     public void bindData(){

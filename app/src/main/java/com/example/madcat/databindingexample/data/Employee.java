@@ -5,15 +5,22 @@ import android.databinding.Bindable;
 
 import com.example.madcat.databindingexample.BR;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Employee extends BaseObservable {
     private String firstName = "";
     private String secondName = "";
     private int age = 0  ;
 
+    public List<String> hobbies;
+
     public Employee(String firstName, String secondName, int age) {
         setFirstName(firstName);
         setSecondName(secondName);
         setAge(age);
+
+        this.hobbies = new ArrayList<>();
     }
 
     @Bindable
@@ -55,5 +62,9 @@ public class Employee extends BaseObservable {
         sb.append("Age: ").append(this.age).append("\n");
 
         return sb.toString();
+    }
+
+    public void addHobby(String hobbyName){
+        this.hobbies.add(hobbyName);
     }
 }
