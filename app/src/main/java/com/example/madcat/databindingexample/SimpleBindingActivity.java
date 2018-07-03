@@ -33,7 +33,7 @@ public class SimpleBindingActivity extends AppCompatActivity {
     }
 
     public void loadData(){
-//        employee = new Employee("John", "Smith", 44);
+        employee = new Employee("John", "Smith", 44);
 
         car = new Car("Toyota", "RAV4", 2015);
 //        car = new Car("Toyota", "RAV4", 0);

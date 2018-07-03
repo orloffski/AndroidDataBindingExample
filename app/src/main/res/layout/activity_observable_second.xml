@@ -3,6 +3,9 @@
 
     <data>
         <variable
+            name="employee"
+            type="com.example.madcat.databindingexample.data.Employee" />
+        <variable
             name="handler"
             type="com.example.madcat.databindingexample.ButtonHandler" />
     </data>
@@ -10,35 +13,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnSimpleBinding"
+
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Simple Binding"
-            android:onClick="@{handler::openSimpleActivity}"/>
+            android:text="@{employee.firstName}" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{employee.secondName}" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(employee.age)}" />
 
         <Button
-            android:id="@+id/btnSimpleBindingV2"
+            android:id="@+id/btnChange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Simple Binding V2"
-            android:onClick="@{() -> handler.openSimpleActivityV2(context)}"/>
-
-        <Button
-            android:id="@+id/btnObservableBinding"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Observable Fields Binding"
-            android:onClick="@{() -> handler.openObservableBindingActivity(context)}"/>
-
-        <Button
-            android:id="@+id/btnObservableBindingV2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Observable Fields Binding V2"
-            android:onClick="@{() -> handler.openObservableBindingActivityV2(context)}"/>
+            android:text="Change data"
+            android:onClick="@{() -> handler.updateEmployee(employee)}"/>
     </LinearLayout>
 </layout>
