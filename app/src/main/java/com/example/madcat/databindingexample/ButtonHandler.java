@@ -11,4 +11,9 @@ public class ButtonHandler {
         Intent intent = new Intent(context, SimpleBindingActivity.class);
         context.startActivity(intent);
     }
+
+    public void openSimpleActivityV2(Context context){
+        Intent intent = new Intent(context, SimpleBindingActivity.class);
+        context.startActivity(intent);
+    }
 }
