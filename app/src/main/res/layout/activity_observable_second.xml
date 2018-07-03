@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <import type="com.example.madcat.databindingexample.Converter"/>
@@ -46,5 +47,10 @@
             android:layout_height="wrap_content"
             android:text="Print data"
             android:onClick="@{() -> handler.printData(employee, context)}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fullname="@{employee}" />
     </LinearLayout>
 </layout>
