@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DataBindingExample</string>
+    <string name="main_app_title">Android Bindings</string>
+    <string name="app_simple_binding_title">Simple Binding</string>
+</resources>
