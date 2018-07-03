@@ -1,31 +1,27 @@
 package com.example.madcat.databindingexample;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.support.v7.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import com.example.madcat.databindingexample.databinding.ActivityMainBinding;
 
-    Button btnSimpleBinding;
+public class MainActivity extends AppCompatActivity{
+
+    ActivityMainBinding binding;
+    ButtonHandler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnSimpleBinding = findViewById(R.id.btnSimpleBinding);
-        btnSimpleBinding.setOnClickListener(this);
+        bindData();
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btnSimpleBinding:
-                Intent intent = new Intent(this, SimpleBindingActivity.class);
-                startActivity(intent);
-                break;
-        }
+    public void bindData(){
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        handler = new ButtonHandler();
+        binding.setHandler(handler);
     }
 }
