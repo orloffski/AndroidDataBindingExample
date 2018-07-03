@@ -45,4 +45,15 @@ public class Employee extends BaseObservable {
         this.age = age;
         notifyPropertyChanged(BR.age);
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("FirstName: ").append(this.firstName).append("\n");
+        sb.append("SecondName: ").append(this.secondName).append("\n");
+        sb.append("Age: ").append(this.age).append("\n");
+
+        return sb.toString();
+    }
 }

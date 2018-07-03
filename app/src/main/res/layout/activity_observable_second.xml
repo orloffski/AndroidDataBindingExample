@@ -19,12 +19,12 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{employee.firstName}" />
+            android:text="@={employee.firstName}" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{employee.secondName}" />
+            android:text="@={employee.secondName}" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -37,5 +37,12 @@
             android:layout_height="wrap_content"
             android:text="Change data"
             android:onClick="@{() -> handler.updateEmployee(employee)}"/>
+
+        <Button
+            android:id="@+id/btnPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Print data"
+            android:onClick="@{() -> handler.printData(employee, context)}"/>
     </LinearLayout>
 </layout>

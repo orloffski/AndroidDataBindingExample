@@ -2,6 +2,7 @@ package com.example.madcat.databindingexample;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 
 import com.example.madcat.databindingexample.data.Car;
@@ -40,5 +41,15 @@ public class ButtonHandler {
         employee.setFirstName("Michael");
         employee.setSecondName("Norris");
         employee.setAge(60);
+    }
+
+    public void printData(Employee employee, Context context){
+        ObservableBindingActivitySecond activitySecond = (ObservableBindingActivitySecond)context;
+
+        Log.d("test", "from layout");
+        Log.d("test", employee.toString());
+        Log.d("test", "\n\n");
+        Log.d("test", "from data");
+        Log.d("test", activitySecond.employee.toString());
     }
 }
