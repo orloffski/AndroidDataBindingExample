@@ -2,6 +2,8 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+        <import type="android.text.TextUtils"/>
+
         <variable
             name="car"
             type="com.example.madcat.databindingexample.data.Car" />
@@ -28,5 +30,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{String.valueOf(car.year)}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{car.mark + " " + car.model}'/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{car.year==0 ? "undefined" : String.valueOf(car.year)}' />
     </LinearLayout>
 </layout>
