@@ -36,6 +36,11 @@ public class ButtonHandler {
         context.startActivity(intent);
     }
 
+    public void openRecyclerViewBindingActivity(Context context){
+        Intent intent = new Intent(context, RecyclerViewBinding.class);
+        context.startActivity(intent);
+    }
+
     public void updateCar(Car car){
         car.mark.set("Lada");
         car.model.set("Vesta");

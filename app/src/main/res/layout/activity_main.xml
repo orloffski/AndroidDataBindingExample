@@ -47,5 +47,12 @@
             android:layout_height="wrap_content"
             android:text="Include File and ViewStub Binding"
             android:onClick="@{() -> handler.openIncludeBindingActivity(context)}"/>
+
+        <Button
+            android:id="@+id/btnRecyclerViewBinding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView Binding"
+            android:onClick="@{() -> handler.openRecyclerViewBindingActivity(context)}"/>
     </LinearLayout>
 </layout>
