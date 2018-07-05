@@ -22,7 +22,8 @@
             android:name=".SimpleBindingActivity"
             android:label="@string/app_simple_binding_title" />
         <activity android:name=".ObservableBindingActivity" />
-        <activity android:name=".ObservableBindingActivitySecond"></activity>
+        <activity android:name=".ObservableBindingActivitySecond" />
+        <activity android:name=".IncludeBinding"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="employee"
+            type="com.example.madcat.databindingexample.data.Employee" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/employeeFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{employee.firstName}" />
+
+        <TextView
+            android:id="@+id/employeeSecondName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{employee.secondName}" />
+
+        <TextView
+            android:id="@+id/employeeAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(employee.age)}" />
+
+    </LinearLayout>
+
+</layout>

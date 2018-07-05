@@ -40,5 +40,12 @@
             android:layout_height="wrap_content"
             android:text="Observable Fields Binding V2"
             android:onClick="@{() -> handler.openObservableBindingActivityV2(context)}"/>
+
+        <Button
+            android:id="@+id/btnIncludeBinding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Include File Binding"
+            android:onClick="@{() -> handler.openIncludeBindingActivity(context)}"/>
     </LinearLayout>
 </layout>

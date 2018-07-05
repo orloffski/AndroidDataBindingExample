@@ -31,6 +31,11 @@ public class ButtonHandler {
         context.startActivity(intent);
     }
 
+    public void openIncludeBindingActivity(Context context){
+        Intent intent = new Intent(context, IncludeBinding.class);
+        context.startActivity(intent);
+    }
+
     public void updateCar(Car car){
         car.mark.set("Lada");
         car.model.set("Vesta");
