@@ -45,7 +45,7 @@
             android:id="@+id/btnIncludeBinding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Include File Binding"
+            android:text="Include File and ViewStub Binding"
             android:onClick="@{() -> handler.openIncludeBindingActivity(context)}"/>
     </LinearLayout>
 </layout>
